@@ -9,7 +9,7 @@ class Sidebar extends Component {
   renderLinks() {
     const links = this.props.links.map((link) => {
       return (
-        <li key={link.object_slug}>
+        <li className="Sidebar-link" key={link.object_slug}>
           <Link to={`/${link.object_slug}`}>{link.title}</Link>
         </li>
       );

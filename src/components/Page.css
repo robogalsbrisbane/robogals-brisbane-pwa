@@ -1,3 +1,12 @@
 .Page-content {
     margin: 20px;
 }
+
+.Page-hero {
+    text-align: center;
+}
+
+#Page-title {
+    color: white;
+    font-size: 3em;
+}

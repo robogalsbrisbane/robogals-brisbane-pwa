@@ -91,16 +91,16 @@ class Page extends Component {
 
       return (
         <section className="hero is-large" style={backgroundImageStyle}>
-          <div className="hero-body">
-            <h1 className="title">{title}</h1>
+          <div className="hero-body Page-hero">
+            <h1 id="Page-title">{title}</h1>
           </div>
         </section>
       );
     } else {
         return (
           <section className="hero is-small primary-bg">
-            <div className="hero-body">
-              <h1 className="title">{title}</h1>
+            <div className="hero-body Page-hero">
+              <h1 id="Page-title">{title}</h1>
             </div>
           </section>
         );

@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
-import { CSSTransitionGroup } from 'react-transition-group';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Page from './components/Page';
@@ -51,22 +50,25 @@ class App extends Component {
 
   closeSidebar() {
     this.setState({sidebarVisible: false});
+    console.log('Closing sidebar');
   }
 
   /**
    * Renders the sidebar
    */
   renderSidebar() {
+    const style = {};
     if (this.state.sidebarVisible) {
-      return (
-        <div className="App-sidebar">
-          <Sidebar links={this.state.menuLinks} />
-        </div>
-      );
+      style.transform = 'translate(0%)';
+    } else {
+      style.transform = 'translate(-105%)';
     }
 
-    // Don't display the sidebar
-    return null;
+    return (
+      <div style={style} className="App-sidebar">
+        <Sidebar links={this.state.menuLinks} />
+      </div>
+    );
   }
 
   /**
@@ -94,20 +96,10 @@ class App extends Component {
         <div className="fill-area">
           <Header toggleSidebar={this.toggleSidebar}/>
 
-          <div className="App-content-container">
-            
-            <CSSTransitionGroup
-            transitionName="App-slide"
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={500}>
-              {this.renderSidebar()}
-            </CSSTransitionGroup>
+          {this.renderSidebar()}
 
-              <div className="content App-content" onClick={this.closeSidebar}>
-                <Route exact strict path="/" render={this.renderFrontpage} />
-                <Route path="/:page_slug" render={this.renderPage} />
-              </div>
-          </div>
+          <Route exact strict path="/" render={this.renderFrontpage} />
+          <Route path="/:page_slug" render={this.renderPage} />
         </div>
       </Router>
     );
