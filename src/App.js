@@ -98,8 +98,10 @@ class App extends Component {
 
           {this.renderSidebar()}
 
-          <Route exact strict path="/" render={this.renderFrontpage} />
-          <Route path="/:page_slug" render={this.renderPage} />
+          <div onClick={this.closeSidebar}>
+            <Route exact strict path="/" render={this.renderFrontpage} />
+            <Route path="/:page_slug" render={this.renderPage} />
+          </div>
         </div>
       </Router>
     );

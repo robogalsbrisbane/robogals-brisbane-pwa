@@ -2,7 +2,7 @@ import axios from 'axios';
 
 class Api {
   constructor() {
-    this.apiUrl = 'http://localhost:8080';
+    this.apiUrl = process.env.REACT_APP_API_ADDRESS;
 
     this.apiPaths = {
       menu: '/wp-json/wp-api-menus/v2/menus/2',
