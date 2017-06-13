@@ -6,7 +6,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 ## Table of Contents
 
 - [Updating to New Releases](#updating-to-new-releases)
-- [Sending Feedback](#sending-feedback)
+- [Setup](#setup)
 - [Available Scripts](#available-scripts)
   - [npm start](#npm-start)
   - [npm test](#npm-test)
@@ -100,9 +100,28 @@ In most cases bumping the `react-scripts` version in `package.json` and running 
 
 We commit to keeping the breaking changes minimal so you can upgrade `react-scripts` painlessly.
 
-## Sending Feedback
+## Setup
 
-We are always open to [your feedback](https://github.com/facebookincubator/create-react-app/issues).
+To get up and running you need to have the following dependencies:
+- Node
+- Python 3 (for the proxy server)
+
+Once these are installed open a terminal and run the following:
+
+```bash
+cd robogals-brisbane-pwa
+npm install
+npm start
+```
+
+In another terminal window start up the proxy server
+```
+python3 proxy.py
+```
+
+The proxy server will proxy all requests from `localhost:8080` to
+`robogalsbrisbane.org`, which enables testing with the live server data.
+
 
 ## Available Scripts
 

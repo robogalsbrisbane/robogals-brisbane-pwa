@@ -6,6 +6,7 @@ import {
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Page from './components/Page';
+import SponsorsPage from './components/SponsorsPage';
 import Api from './Api';
 import './App.css';
 
@@ -86,7 +87,12 @@ class App extends Component {
   renderPage(props) {
     const slug = props.match.params.page_slug;
 
-    return <Page slug={slug} />;
+    switch (slug) {
+      case 'sponsors':
+        return <SponsorsPage />;
+      default:
+        return <Page slug={slug} />;
+    }
   }
 
   render() {

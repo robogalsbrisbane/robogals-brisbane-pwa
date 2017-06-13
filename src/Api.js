@@ -8,7 +8,8 @@ class Api {
       menu: '/wp-json/wp-api-menus/v2/menus/2',
       frontpage: '/wp-json/wp/v2/frontpage',
       page: '/wp-json/wp/v2/pages',
-      media: '/wp-json/wp/v2/media'
+      media: '/wp-json/wp/v2/media',
+      sponsors: '/wp-json/wp/v2/sponsors'
     };
   }
 
@@ -64,6 +65,17 @@ class Api {
         }
 
         return {};
+      })
+      .catch((err) => {
+        // console.log(err);
+      });
+  }
+
+  getSponsors() {
+    return axios.get(this.getApiUrl('sponsors'))
+      .then((resp) => {
+        console.log(resp.data);
+        return resp.data;
       })
       .catch((err) => {
         // console.log(err);
