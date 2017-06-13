@@ -23,7 +23,7 @@ class Api {
         return resp.data.items;
       })
       .catch((err) => {
-        // console.log(err);
+        return [];
       });
   }
 
