@@ -16,6 +16,9 @@ class Page extends Component {
 
   }
 
+  /**
+   * Returns the title of the document
+   */
   getTitle() {
     if (this.state.content) {
       if (this.state.content.title) {
@@ -26,6 +29,9 @@ class Page extends Component {
     return null;
   }
 
+  /**
+   * Returns the body of the document
+   */
   getBody() {
     if (this.state.content) {
       if (this.state.content.content) {
@@ -111,7 +117,7 @@ class Page extends Component {
     return (
       <div>
         {this.renderHero()}
-        <div className="Page-content" dangerouslySetInnerHTML={this.getBody()} />
+        <div className="Page-content content" dangerouslySetInnerHTML={this.getBody()} />
       </div>
     );
   }

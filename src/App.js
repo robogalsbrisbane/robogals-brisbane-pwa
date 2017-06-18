@@ -51,7 +51,6 @@ class App extends Component {
 
   closeSidebar() {
     this.setState({sidebarVisible: false});
-    console.log('Closing sidebar');
   }
 
   /**

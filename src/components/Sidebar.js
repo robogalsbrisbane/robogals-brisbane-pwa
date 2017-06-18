@@ -30,7 +30,7 @@ class Sidebar extends Component {
     return (
       <div className="menu Sidebar-container">
         <p className="menu-label">
-          General
+          Pages
         </p>
         <ul className="menu-list">
           {this.renderLinks()}

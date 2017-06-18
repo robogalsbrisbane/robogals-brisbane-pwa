@@ -1,5 +1,9 @@
 import axios from 'axios';
 
+/**
+ * Contains methods for getting data
+ * from the API
+ */
 class Api {
   constructor() {
     this.apiUrl = process.env.REACT_APP_API_ADDRESS;
@@ -13,10 +17,16 @@ class Api {
     };
   }
 
+  /**
+   * Returns the API URL
+   */
   getApiUrl(pathKey) {
     return `${this.apiUrl}${this.apiPaths[pathKey]}`;
   }
 
+  /**
+   * Returns the links from the primary menu
+   */
   getMenuLinks() {
     return axios.get(this.getApiUrl('menu'))
       .then((resp) => {
@@ -27,6 +37,9 @@ class Api {
       });
   }
 
+  /**
+   * Retrieves a media item
+   */
   getMedia(mediaId) {
     if (mediaId == null) {
       // return an empty promise
@@ -47,6 +60,9 @@ class Api {
       });
   }
 
+  /**
+   * Returns a page by slug
+   */
   getPage(page_slug) {
     if (page_slug == null) {
       // return an empty promise
@@ -71,6 +87,9 @@ class Api {
       });
   }
 
+  /**
+   * Returns the sponsors
+   */
   getSponsors() {
     return axios.get(this.getApiUrl('sponsors'))
       .then((resp) => {
