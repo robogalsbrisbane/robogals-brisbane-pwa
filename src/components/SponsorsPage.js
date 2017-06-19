@@ -21,7 +21,7 @@ class SponsorsPage extends Component {
 
   renderSponsors() {
     const sponsors = this.state.sponsors.map((sponsor) => {
-      return <Sponsor key={sponsor.id} sponsor={sponsor} />
+      return <Sponsor key={sponsor.id} api={this.api} sponsor={sponsor} />
     });
 
     return sponsors;

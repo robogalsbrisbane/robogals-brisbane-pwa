@@ -1,0 +1,14 @@
+.Sponsor-box {
+    display: flex;
+}
+
+.Sponsor-image {
+    flex: 0 0 300px;
+    margin: auto;
+    padding: 10px;
+}
+
+.Sponsor-text {
+    padding: 10px;
+    flex-shrink: 1;
+}
