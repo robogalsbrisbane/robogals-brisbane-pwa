@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Icon } from 'react-fa';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './Header.css';
 
 class Header extends Component {
@@ -20,12 +22,16 @@ class Header extends Component {
               <Icon style={headerStyle} name="bars" />
             </a>
 
-            <a className="nav-item" style={headerStyle}>Robogals<b>UQ</b></a>
+            <Link to="/" className="nav-item" style={headerStyle}>Robogals<b>UQ</b></Link>
           </div>
         </nav>
       </div>
     )
   }
 }
+
+Header.propTypes = {
+  toggleSidebar: PropTypes.func
+};
 
 export default Header;

@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route
-} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
-import Page from './components/Page';
-import SponsorsPage from './components/SponsorsPage';
+import Navigation from './components/Navigation';
 import Api from './Api';
 import './App.css';
 
@@ -37,8 +33,6 @@ class App extends Component {
 
     this.toggleSidebar = this.toggleSidebar.bind(this);
     this.closeSidebar = this.closeSidebar.bind(this);
-    this.renderFrontpage = this.renderFrontpage.bind(this);
-    this.renderPage = this.renderPage.bind(this);
   }
 
   toggleSidebar() {
@@ -71,31 +65,7 @@ class App extends Component {
     );
   }
 
-  /**
-   * Renders the frontpage of the application
-   */
-  renderFrontpage() {
-    return <Page slug={this.state.frontpageSlug} />;
-  }
-
-  /**
-   * Render a page
-   * 
-   * The props is a instance from the React Router
-   */
-  renderPage(props) {
-    const slug = props.match.params.page_slug;
-
-    switch (slug) {
-      case 'sponsors':
-        return <SponsorsPage />;
-      default:
-        return <Page slug={slug} />;
-    }
-  }
-
   render() {
-
     return (
       <Router>
         <div className="fill-area">
@@ -104,8 +74,7 @@ class App extends Component {
           {this.renderSidebar()}
 
           <div onClick={this.closeSidebar}>
-            <Route exact strict path="/" render={this.renderFrontpage} />
-            <Route path="/:page_slug" render={this.renderPage} />
+            <Navigation frontpageSlug={this.state.frontpageSlug} />
           </div>
         </div>
       </Router>

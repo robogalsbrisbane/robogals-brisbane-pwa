@@ -3,6 +3,10 @@
     background-color: #36648B; 
 }
 
+.primary-bg-darker {
+    background-color: #033158;
+}
+
 html, body, #root, .fill-area {
     margin: 0;
     padding: 0;

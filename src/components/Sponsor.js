@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Sponsor.css';
 
 class Sponsor extends Component {
@@ -48,5 +49,10 @@ class Sponsor extends Component {
     )
   }
 }
+
+Sponsor.propTypes = {
+  sponsor: PropTypes.object.isRequired,
+  api: PropTypes.object.isRequired
+};
 
 export default Sponsor;

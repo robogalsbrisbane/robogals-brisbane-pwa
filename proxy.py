@@ -37,6 +37,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 
 
 def run():
+    """ Runs the server on LOCAL_PORT """
     server_address = ('', LOCAL_PORT)
     print('Running proxy on port {}'.format(server_address[1]))
     httpd = HTTPServer(server_address, RequestHandler)

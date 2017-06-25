@@ -93,7 +93,6 @@ class Api {
   getSponsors() {
     return axios.get(this.getApiUrl('sponsors'))
       .then((resp) => {
-        console.log(resp.data);
         return resp.data;
       })
       .catch((err) => {

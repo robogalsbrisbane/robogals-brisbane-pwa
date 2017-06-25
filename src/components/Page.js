@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Api from '../Api';
 import './Page.css';
 
@@ -20,9 +21,19 @@ class Page extends Component {
    * Returns the title of the document
    */
   getTitle() {
+
+    // If we have a custom title, display it
+    if (this.props.title) {
+      return {
+        __html: this.props.title
+      };
+    }
+
     if (this.state.content) {
       if (this.state.content.title) {
-        return this.state.content.title.rendered;
+        return {
+          __html: this.state.content.title.rendered
+        }
       }
     }
 
@@ -89,8 +100,14 @@ class Page extends Component {
 
 
     if (this.state.featuredImage) {
+      // Move this to css
       const backgroundImageStyle = {
-        backgroundImage: `url("${this.state.featuredImage}")`,
+        background: `linear-gradient(
+            135deg,
+            rgba(54, 100, 139, 0.45),
+            rgba(3, 49, 88, 0.6)
+          ), 
+          url("${this.state.featuredImage}")`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
       };
@@ -98,15 +115,15 @@ class Page extends Component {
       return (
         <section className="hero is-large" style={backgroundImageStyle}>
           <div className="hero-body Page-hero">
-            <h1 id="Page-title">{title}</h1>
+            <h1 id="Page-title" dangerouslySetInnerHTML={title}></h1>
           </div>
         </section>
       );
     } else {
         return (
-          <section className="hero is-small primary-bg">
+          <section className="hero is-small primary-bg-darker">
             <div className="hero-body Page-hero">
-              <h1 id="Page-title">{title}</h1>
+              <h1 id="Page-title" dangerouslySetInnerHTML={title}></h1>
             </div>
           </section>
         );
@@ -122,5 +139,10 @@ class Page extends Component {
     );
   }
 }
+
+Page.propTypes = {
+  title: PropTypes.string,
+  slug: PropTypes.string
+};
 
 export default Page;
