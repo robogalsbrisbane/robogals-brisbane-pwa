@@ -102,7 +102,7 @@ class Page extends Component {
     if (this.state.featuredImage) {
       // Move this to css
       const backgroundImageStyle = {
-        background: `linear-gradient(
+        backgroundImage: `linear-gradient(
             135deg,
             rgba(54, 100, 139, 0.45),
             rgba(3, 49, 88, 0.6)
