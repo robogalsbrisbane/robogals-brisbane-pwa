@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './Sponsor.css';
+import './Partner.css';
 
-class Sponsor extends Component {
+class Partner extends Component {
 
   constructor(props) {
     super(props);
@@ -11,7 +11,7 @@ class Sponsor extends Component {
       imageUrl: null
     };
 
-    const featuredImage = this.props.sponsor.featured_media;
+    const featuredImage = this.props.partner.featured_media;
     this.props.api.getMedia(featuredImage)
       .then((imageUrl) => {
         this.setState({imageUrl: imageUrl});
@@ -19,7 +19,7 @@ class Sponsor extends Component {
   }
 
   getTitle() {
-    return this.props.sponsor.title.rendered;
+    return this.props.partner.title.rendered;
   }
 
   getImage() {
@@ -28,20 +28,20 @@ class Sponsor extends Component {
 
   getBody() {
     return {
-      __html: this.props.sponsor.content.rendered
+      __html: this.props.partner.content.rendered
     };
   }
 
   render() {
 
     return (
-      <div className="Sponsor-box">
+      <div className="Partner-box">
 
-        <div className="Sponsor-image">
+        <div className="Partner-image">
           <img alt="Logo" src={this.state.imageUrl} />
         </div>
 
-        <div className="Sponsor-text">
+        <div className="Partner-text">
           <h1 className="title">{this.getTitle()}</h1>
           <div dangerouslySetInnerHTML={this.getBody()} />
         </div>
@@ -50,9 +50,9 @@ class Sponsor extends Component {
   }
 }
 
-Sponsor.propTypes = {
-  sponsor: PropTypes.object.isRequired,
+Partner.propTypes = {
+  partner: PropTypes.object.isRequired,
   api: PropTypes.object.isRequired
 };
 
-export default Sponsor;
+export default Partner;

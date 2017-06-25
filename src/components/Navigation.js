@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Page from './Page';
-import SponsorsPage from './SponsorsPage';
+import PartnersPage from './PartnersPage';
 
 class Navigation extends Component {
 
@@ -30,7 +30,7 @@ class Navigation extends Component {
 
     switch (slug) {
       case 'sponsors':
-        return <SponsorsPage />;
+        return <PartnersPage />;
       default:
         return <Page slug={slug} />;
     }

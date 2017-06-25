@@ -13,7 +13,7 @@ class Api {
       frontpage: '/wp-json/wp/v2/frontpage',
       page: '/wp-json/wp/v2/pages',
       media: '/wp-json/wp/v2/media',
-      sponsors: '/wp-json/wp/v2/sponsors'
+      partners: '/wp-json/wp/v2/sponsors'
     };
   }
 
@@ -88,10 +88,10 @@ class Api {
   }
 
   /**
-   * Returns the sponsors
+   * Returns the partners
    */
-  getSponsors() {
-    return axios.get(this.getApiUrl('sponsors'))
+  getPartners() {
+    return axios.get(this.getApiUrl('partners'))
       .then((resp) => {
         return resp.data;
       })

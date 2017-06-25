@@ -1,14 +1,14 @@
-.Sponsor-box {
+.Partner-box {
     display: flex;
 }
 
-.Sponsor-image {
+.Partner-image {
     flex: 0 0 300px;
     margin: auto;
     padding: 10px;
 }
 
-.Sponsor-text {
+.Partner-text {
     padding: 10px;
     flex-shrink: 1;
 }
