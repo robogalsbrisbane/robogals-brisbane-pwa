@@ -16,8 +16,8 @@ class Sidebar extends Component {
   renderLinks() {
     const links = this.props.links.map((link) => {
       return (
-        <li className="Sidebar-link" key={link.object_slug}>
-          <Link to={`/${this.parseLink(link)}`}>{link.title}</Link>
+        <li className="Sidebar-link" key={link.title}>
+          <Link to={`/${this.parseLink(link)}`} dangerouslySetInnerHTML={{__html: link.title}} />
         </li>
       );
     });
