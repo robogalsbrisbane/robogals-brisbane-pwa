@@ -1,0 +1,14 @@
+.Executive-box {
+    display: flex;
+}
+
+.Executive-image {
+    flex: 0 0 300px;
+    padding: 10px;
+}
+
+.Executive-text {
+    padding: 10px;
+    flex-shrink: 1;
+    margin: auto;
+}
