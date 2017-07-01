@@ -44,7 +44,9 @@ class App extends Component {
   }
 
   closeSidebar() {
-    this.setState({sidebarVisible: false});
+    if (this.state.sidebarVisible) {
+      this.setState({sidebarVisible: false});
+    }
   }
 
   /**

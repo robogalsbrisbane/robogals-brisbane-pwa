@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Page from './Page';
 import PartnersPage from './PartnersPage';
+import ExecutivesPage from './ExecutivesPage';
+import WorkshopMap from './WorkshopMap';
 
 class Navigation extends Component {
 
@@ -31,6 +33,10 @@ class Navigation extends Component {
     switch (slug) {
       case 'sponsors':
         return <PartnersPage />;
+      case 'executives':
+        return <ExecutivesPage />;
+      case 'locations':
+        return <WorkshopMap />;
       default:
         return <Page slug={slug} />;
     }

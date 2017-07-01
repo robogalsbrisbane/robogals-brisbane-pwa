@@ -22,10 +22,6 @@ class Partner extends Component {
     return this.props.partner.title.rendered;
   }
 
-  getImage() {
-
-  }
-
   getBody() {
     return {
       __html: this.props.partner.content.rendered

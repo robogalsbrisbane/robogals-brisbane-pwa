@@ -11,4 +11,5 @@
 .Partner-text {
     padding: 10px;
     flex-shrink: 1;
+    margin: auto;
 }
