@@ -13,16 +13,40 @@ class Sidebar extends Component {
     return link.object;
   }
 
-  renderLinks() {
-    const links = this.props.links.map((link) => {
+  /**
+   * Renders all links from the props.links object
+   */
+  renderAllLinks() {
+    return this.renderLinks(this.props.links, 0);  
+  }
+
+  /**
+   * Renders a list of links
+   * Will recurse through children object
+   *
+   * @param {object} links A json object of links
+   * @param {integer} depth The depth of the current links
+   */
+  renderLinks(links, depth) {
+    const linkObjects = links.map((link) => {
+      
+      let childLinks = null;
+
+      if (link.children) {
+        childLinks = this.renderLinks(link.children, depth + 1);
+      }
+
+      const style = {'paddingLeft': (10 * depth) + 'px'};
+
       return (
         <li className="Sidebar-link" key={link.title}>
-          <Link to={`/${this.parseLink(link)}`} dangerouslySetInnerHTML={{__html: link.title}} />
+          <Link to={`/${this.parseLink(link)}`} style={style} dangerouslySetInnerHTML={{__html: link.title}} />
+          {childLinks}
         </li>
       );
     });
 
-    return links;
+    return linkObjects;
   }
 
   render() {
@@ -33,7 +57,7 @@ class Sidebar extends Component {
           Pages
         </p>
         <ul className="menu-list">
-          {this.renderLinks()}
+          {this.renderAllLinks()}
         </ul>
       </div>
     )
