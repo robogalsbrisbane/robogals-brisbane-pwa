@@ -1,57 +1,69 @@
 import React, { Component } from 'react';
-import { Map, CircleMarker, Popup, TileLayer } from 'react-leaflet';
 
 class WorkshopMap extends Component {
   constructor(props) {
     super(props);
+    this.map = null;
 
     this.markers = [
-      {location: [-27.497686, 153.014022], text: 'University of Queensland'},
-      {location: [-27.476547, 153.027841], text: 'Queensland University of Technology'},
-      {location: [-27.476690, 153.020662], text: 'Griffith'}
+      {position: {lat: -27.497686, lng: 153.014022}, title: 'University of Queensland'},
+      {position: {lat: -27.476547, lng: 153.027841}, title: 'Queensland University of Technology'},
+      {position: {lat: -27.476690, lng: 153.020662}, title: 'Griffith'}
     ]
+
+    this.markerObjs = [];
+    this.options = {
+      center: {lat: -27.4698, lng: 153.0251},
+      zoom: 13
+    };
+    this.setupMap = this.setupMap.bind(this);
   }
 
-  createMarker(location, text) {
-    return (
-      <CircleMarker center={location} radius={8}>
-        <Popup>
-          <span>{text}</span>
-        </Popup>
-      </CircleMarker>
-    )
+  createMarker(position, title) {
+    const marker = new window.google.maps.Marker({
+      map: this.map,
+      position: position
+    });
+
+    const infoWindow = new window.google.maps.InfoWindow({
+      content: `
+      <div>
+        <h1>${title}</h1>
+      </div>
+      `
+    });
+
+    marker.addListener('click', () => {
+      infoWindow.open(this.map, marker)
+    });
+
+    this.markerObjs.push(marker);
   }
 
   renderMarkers() {
-    return this.markers.map((marker) => {
-      return this.createMarker(marker.location, marker.text);
-    });
+    this.markers.map((marker) => this.createMarker(marker.position, marker.title));
   }
 
   listMarkers() {
     return this.markers.map((marker) => {
-      return <li>{marker.text}</li>;
+      return <li key={marker.title}>{marker.title}</li>;
     });
   }
 
-  render() {
-    const mapStyle = {
-      minHeight: '400px'
-    };
+  setupMap(ref) {
+    this.map = new window.google.maps.Map(ref, this.options);
 
-    const position = [-27.4698, 153.0251];
+    this.renderMarkers();
+  }
+
+  render() {
+
+    const style = {height: '300px'};
 
     return (
       <div>
-				<Map center={position} zoom={13} style={mapStyle}>
-					<TileLayer
-						url='https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png'
-						attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy;
-        <a href="https://carto.com/attribution">CARTO</a>'
-					/>
 
-          {this.renderMarkers()}
-				</Map>
+        <div ref={this.setupMap} style={style} />
 
         <div className="content">
           <h1>Upcoming Events</h1>

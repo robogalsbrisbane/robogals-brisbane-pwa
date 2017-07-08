@@ -39,10 +39,12 @@ class Sidebar extends Component {
       const style = {'paddingLeft': (10 * depth) + 'px'};
 
       return (
-        <li className="Sidebar-link" key={link.title}>
-          <Link to={`/${this.parseLink(link)}`} style={style} dangerouslySetInnerHTML={{__html: link.title}} />
+        <div key={link.title}>
+          <li className="Sidebar-link">
+            <Link to={`/${this.parseLink(link)}`} style={style} dangerouslySetInnerHTML={{__html: link.title}} />
+          </li>
           {childLinks}
-        </li>
+      </div>
       );
     });
 

@@ -8,7 +8,8 @@ it('contains all required api paths', () => {
     'frontpage',
     'page',
     'media',
-    'partners'
+    'partners',
+    'executives'
   ];
 
   expect(expectedPaths).toEqual(actualPaths);
