@@ -28,8 +28,14 @@ class Sidebar extends Component {
    * @param {integer} depth The depth of the current links
    */
   renderLinks(links, depth) {
+
+    if (links == null) {
+      return (
+        <p>Server offline</p>
+      );
+    }
+
     const linkObjects = links.map((link) => {
-      
       let childLinks = null;
 
       if (link.children) {
@@ -44,7 +50,7 @@ class Sidebar extends Component {
             <Link to={`/${this.parseLink(link)}`} style={style} dangerouslySetInnerHTML={{__html: link.title}} />
           </li>
           {childLinks}
-      </div>
+        </div>
       );
     });
 
