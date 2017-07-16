@@ -51,9 +51,11 @@ class WorkshopMap extends Component {
   }
 
   setupMap(ref) {
-    this.map = new window.google.maps.Map(ref, this.options);
+    if(ref) {
+      this.map = new window.google.maps.Map(ref, this.options);
 
-    this.renderMarkers();
+      this.renderMarkers();
+    }
   }
 
   render() {

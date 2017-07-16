@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 import Api from '../Api';
 import './Page.css';
@@ -15,6 +16,7 @@ class Page extends Component {
       featuredImage: null
     };
 
+    this.captureLinks = this.captureLinks.bind(this);
   }
 
   /**
@@ -130,11 +132,37 @@ class Page extends Component {
     }
   }
 
+  findAnchor(node) {
+    while (node.nodeName.toLowerCase() !== 'a') {
+      if (!node.parentNode) {
+        return false;
+      }
+      node = node.parentNode;
+    }
+    return node;
+  }
+
+  captureLinks(event) {
+    const anchor = this.findAnchor(event.target);
+    console.log(anchor);
+    if (anchor && anchor.href) {
+
+      if (window.location.hostname === anchor.hostname) {
+        event.preventDefault();
+        this.props.history.push(anchor.pathname);
+      }
+    }
+  }
+
   render() {
     return (
       <div>
         {this.renderHero()}
-        <div className="Page-content content" dangerouslySetInnerHTML={this.getBody()} />
+        <div 
+          className="Page-content content"
+          onClick={this.captureLinks}
+          dangerouslySetInnerHTML={this.getBody()} 
+        />
       </div>
     );
   }
@@ -145,4 +173,4 @@ Page.propTypes = {
   slug: PropTypes.string
 };
 
-export default Page;
+export default withRouter(Page);
