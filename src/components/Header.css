@@ -1,4 +1,8 @@
-#Header-name {
+.Header-burger {
     color: white;
+}
+
+.Header-burger > span {
+    margin: 10px;
     font-size: 2em;
 }

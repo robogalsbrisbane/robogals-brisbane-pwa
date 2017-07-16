@@ -49,7 +49,9 @@ class Sidebar extends Component {
           <li className="Sidebar-link">
             <Link to={`/${this.parseLink(link)}`} style={style} dangerouslySetInnerHTML={{__html: link.title}} />
           </li>
-          {childLinks}
+          <ul>
+            {childLinks}
+          </ul>
         </div>
       );
     });
@@ -60,10 +62,7 @@ class Sidebar extends Component {
   render() {
 
     return (
-      <div className="menu Sidebar-container">
-        <p className="menu-label">
-          Pages
-        </p>
+      <div className="menu Sidebar-container"> <p className="menu-label"> Pages </p>
         <ul className="menu-list">
           {this.renderAllLinks()}
         </ul>

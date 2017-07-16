@@ -10,19 +10,19 @@ class Header extends Component {
     // Define the style here, so it overrides Bulma's style
     const headerStyle = {
       color: 'white',
-      fontSize: '2em'
+      fontSize: '2em',
+      margin: 'auto'
     };
 
     return (
       <div>
-        <nav className="nav has-shadow primary-bg">
-          <div className="nav-left">
-
-            <a className="nav-item" onClick={this.props.toggleSidebar}>
-              <Icon style={headerStyle} name="bars" />
+        <nav className="navbar primary-bg">
+          <div className="navbar-start">
+            <a className="Header-burger" onClick={this.props.toggleSidebar}>
+              <Icon name="bars" />
             </a>
 
-            <Link to="/" className="nav-item" style={headerStyle}>Robogals<b>UQ</b></Link>
+            <Link to="/" style={headerStyle}>Robogals<b>UQ</b></Link>
           </div>
         </nav>
       </div>
