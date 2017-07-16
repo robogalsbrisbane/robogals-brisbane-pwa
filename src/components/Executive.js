@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
+import BaseComponent from './BaseComponent';
 import PropTypes from 'prop-types';
 import './Executive.css';
 
-class Executive extends Component {
+class Executive extends BaseComponent {
 
   constructor(props) {
     super(props);
@@ -14,7 +15,7 @@ class Executive extends Component {
     const featuredImage = this.props.executive.featured_media;
     this.props.api.getMedia(featuredImage)
       .then((imageUrl) => {
-        this.setState({imageUrl: imageUrl});
+        this.updateState({imageUrl: imageUrl});
       });
   }
 

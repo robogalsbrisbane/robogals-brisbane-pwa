@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import BaseComponent from './BaseComponent';
 import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 import Api from '../Api';
 import './Page.css';
 
-class Page extends Component {
+class Page extends BaseComponent {
   constructor(props) {
     super(props); 
 
@@ -64,10 +65,10 @@ class Page extends Component {
       if (featuredMedia !== null && featuredMedia !== 0) {
         this.api.getMedia(featuredMedia)
           .then((url) => {
-            this.setState({featuredImage: url});
+            this.updateState({featuredImage: url});
           });
       } else {
-        this.setState({featuredImage: null});
+        this.updateState({featuredImage: null});
       }
     }
   }
@@ -78,7 +79,7 @@ class Page extends Component {
   getPageData(slug) {
     this.api.getPage(slug)
       .then((page) => {
-        this.setState({content: page});
+        this.updateState({content: page});
 
         // Update the media URL
         this.getMediaUrl();
@@ -86,6 +87,7 @@ class Page extends Component {
   }
 
   componentDidMount() {
+    super.componentDidMount();
     const slug = this.props.slug;
     this.getPageData(slug);
   }
