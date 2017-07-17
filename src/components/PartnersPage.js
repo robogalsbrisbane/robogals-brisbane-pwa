@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Partner from './Partner';
+import Hero from './Hero';
 import Api from '../Api';
 
 class PartnersPage extends Component {
@@ -30,6 +31,7 @@ class PartnersPage extends Component {
   render() {
     return (
       <div>
+        <Hero title={"Our Partners"} />
         {this.renderPartners()}
       </div>
     );

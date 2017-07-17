@@ -3,6 +3,7 @@ import BaseComponent from './BaseComponent';
 import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 import Api from '../Api';
+import Hero from './Hero';
 import './Page.css';
 
 class Page extends BaseComponent {
@@ -27,16 +28,12 @@ class Page extends BaseComponent {
 
     // If we have a custom title, display it
     if (this.props.title) {
-      return {
-        __html: this.props.title
-      };
+      return this.props.title;
     }
 
     if (this.state.content) {
       if (this.state.content.title) {
-        return {
-          __html: this.state.content.title.rendered
-        }
+        return this.state.content.title.rendered;
       }
     }
 
@@ -99,41 +96,6 @@ class Page extends BaseComponent {
     }
   }
 
-  renderHero() {
-    const title = this.getTitle();
-
-
-    if (this.state.featuredImage) {
-      // Move this to css
-      const backgroundImageStyle = {
-        backgroundImage: `linear-gradient(
-            135deg,
-            rgba(54, 100, 139, 0.45),
-            rgba(3, 49, 88, 0.6)
-          ), 
-          url("${this.state.featuredImage}")`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
-      };
-
-      return (
-        <section className="hero is-large" style={backgroundImageStyle}>
-          <div className="hero-body Page-hero">
-            <h1 id="Page-title" dangerouslySetInnerHTML={title}></h1>
-          </div>
-        </section>
-      );
-    } else {
-        return (
-          <section className="hero is-small primary-bg-darker">
-            <div className="hero-body Page-hero">
-              <h1 id="Page-title" dangerouslySetInnerHTML={title}></h1>
-            </div>
-          </section>
-        );
-    }
-  }
-
   findAnchor(node) {
     while (node.nodeName.toLowerCase() !== 'a') {
       if (!node.parentNode) {
@@ -159,7 +121,7 @@ class Page extends BaseComponent {
   render() {
     return (
       <div>
-        {this.renderHero()}
+        <Hero title={this.getTitle()} image={this.state.featuredImage} />
         <div 
           className="Page-content content"
           onClick={this.captureLinks}
