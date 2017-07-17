@@ -62,8 +62,8 @@ class Sidebar extends Component {
   render() {
 
     return (
-      <div className="menu Sidebar-container"> <p className="menu-label"> Pages </p>
-        <ul className="menu-list">
+      <div className="Sidebar-container"> <p className="menu-label"> Pages </p>
+        <ul>
           {this.renderAllLinks()}
         </ul>
       </div>

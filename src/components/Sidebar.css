@@ -4,5 +4,10 @@
 }
 
 .Sidebar-link {
-    transition: 0.3s;
+    padding: 5px; 
+    transition: all 0.2s ease-in-out;
+}
+
+.Sidebar-link:hover {
+    transform: translate(-5px, 0);
 }

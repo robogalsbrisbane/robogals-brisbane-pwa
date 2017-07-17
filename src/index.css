@@ -7,6 +7,10 @@
     background-color: #033158;
 }
 
+a {
+    color: #36648B; 
+}
+
 html, body, #root, .fill-area {
     margin: 0;
     padding: 0;
