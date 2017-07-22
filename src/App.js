@@ -11,6 +11,9 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    // The basename for react router
+    this.basename = process.env.REACT_APP_BASENAME;
+
     this.api = new Api();
 
     this.state = {
@@ -69,7 +72,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router basename={this.basename}>
         <div className="fill-area">
           <Header toggleSidebar={this.toggleSidebar}/>
 
