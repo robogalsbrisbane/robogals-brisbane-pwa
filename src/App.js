@@ -65,7 +65,7 @@ class App extends Component {
 
     return (
       <div style={style} className="App-sidebar">
-        <Sidebar links={this.state.menuLinks} />
+        <Sidebar closeSidebar={this.closeSidebar} links={this.state.menuLinks} />
       </div>
     );
   }

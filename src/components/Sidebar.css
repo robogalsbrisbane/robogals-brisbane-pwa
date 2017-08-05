@@ -8,6 +8,10 @@
     transition: all 0.2s ease-in-out;
 }
 
+.Sidebar-link-active {
+    transform: translate(-5px, 0);
+}
+
 .Sidebar-link:hover {
     transform: translate(-5px, 0);
 }

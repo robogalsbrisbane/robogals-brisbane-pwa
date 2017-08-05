@@ -20,3 +20,7 @@
 .Page-content a:hover {
     border-bottom: 3px solid black;
 }
+
+.Page-content img {
+    height: auto;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
-  Link
+  NavLink
 } from 'react-router-dom';
 import './Sidebar.css';
 
@@ -47,7 +48,13 @@ class Sidebar extends Component {
       return (
         <div key={link.title}>
           <li className="Sidebar-link">
-            <Link to={`/${this.parseLink(link)}`} style={style} dangerouslySetInnerHTML={{__html: link.title}} />
+            <NavLink 
+              activeClassName="Sidebar-link-active"
+              onClick={this.props.closeSidebar}
+              to={`/${this.parseLink(link)}`}
+              style={style}
+              dangerouslySetInnerHTML={{__html: link.title}} 
+            />
           </li>
           <ul>
             {childLinks}
@@ -70,5 +77,9 @@ class Sidebar extends Component {
     )
   }
 }
+
+Sidebar.propTypes = {
+  closeSidebar: PropTypes.func
+};
 
 export default Sidebar;

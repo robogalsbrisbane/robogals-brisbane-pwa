@@ -13,6 +13,8 @@ class Page extends BaseComponent {
     // Allows us to get the content from the API
     this.api = new Api();
 
+    this.hostname = process.env.REACT_APP_HOSTNAME || window.location.hostname;
+
     this.state = {
       content: {},
       featuredImage: null
@@ -108,10 +110,8 @@ class Page extends BaseComponent {
 
   captureLinks(event) {
     const anchor = this.findAnchor(event.target);
-    console.log(anchor);
     if (anchor && anchor.href) {
-
-      if (window.location.hostname === anchor.hostname) {
+      if (this.hostname === anchor.hostname) {
         event.preventDefault();
         this.props.history.push(anchor.pathname);
       }
