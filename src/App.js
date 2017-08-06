@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import Api from './Api';
 import './App.css';
 
@@ -81,6 +82,8 @@ class App extends Component {
           <div onClick={this.closeSidebar}>
             <Navigation frontpageSlug={this.state.frontpageSlug} />
           </div>
+
+          <Footer/>
         </div>
       </Router>
     );
