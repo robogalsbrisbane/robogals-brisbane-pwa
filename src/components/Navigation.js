@@ -52,6 +52,8 @@ class Navigation extends Component {
         return <ExecutivesPage />;
       case 'locations':
         return <WorkshopMap />;
+      case 'home-page':
+        return this.renderFrontpage();
       default:
         return <Page slug={slug} />;
     }
