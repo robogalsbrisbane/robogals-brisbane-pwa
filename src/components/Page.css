@@ -13,12 +13,7 @@
 }
 
 .Page-content a {
-    border-bottom: 1px solid black;
-    transition: all 0.2s;
-}
-
-.Page-content a:hover {
-    border-bottom: 3px solid black;
+    color: #36648B;
 }
 
 .Page-content img {
