@@ -1,5 +1,8 @@
 .Page-content {
-    margin: 20px;
+    margin: auto;
+    width: 70%;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 #Page-title {
