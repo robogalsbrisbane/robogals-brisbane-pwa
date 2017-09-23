@@ -18,6 +18,17 @@ class Api {
     };
   }
 
+  getNotFound() {
+    return {
+      title: {
+        rendered: "Page not found"
+      },
+      content: {
+        rendered: "<p>Return to the <a href=\"/\">home page</a></p>"
+      }
+    }
+  }
+
   /**
    * Returns the API URL
    */
