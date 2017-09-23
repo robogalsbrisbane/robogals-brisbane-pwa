@@ -5,6 +5,14 @@
     padding-bottom: 50px;
 }
 
+.Page-content table td, .Page-content table th {
+    border: 0px !important;
+}
+
+.Page-content table tr:hover {
+    background-color: inherit !important;
+}
+
 #Page-title {
     color: white;
     font-size: 3em;

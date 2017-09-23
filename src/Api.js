@@ -45,7 +45,7 @@ class Api {
     if (mediaId == null) {
       // return an empty promise
       return new Promise((resolve, reject) => {
-        resolve({});
+        resolve(null);
       });
     }
 
@@ -68,7 +68,7 @@ class Api {
     if (page_slug == null) {
       // return an empty promise
       return new Promise((resolve, reject) => {
-        resolve({});
+        resolve(null);
       });
     }
 
@@ -81,7 +81,7 @@ class Api {
           return resp.data[0];
         }
 
-        return {};
+        return this.getNotFound();
       })
       .catch((err) => {
         // console.log(err);
