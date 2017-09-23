@@ -9,7 +9,9 @@ export default () => (
       <div className="column Footer-column">
         <h4>Get Involved!</h4>
         <p>
-					If you are a parent, educator, school student, university student or industry professional of any age and gender, you can get involved with us. Find out more <Link to="/get-involved">here</Link>!
+					If you are a parent, educator, school student, university student 
+          or industry professional of any age and gender,
+          you can get involved with us. Find out more <Link to="/volunteer-with-us">here</Link>!
         </p>
       </div>
 
