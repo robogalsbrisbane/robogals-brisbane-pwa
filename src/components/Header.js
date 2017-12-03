@@ -7,23 +7,16 @@ import './Header.css';
 class Header extends Component {
   render() {
 
-    // Define the style here, so it overrides Bulma's style
-    const headerStyle = {
-      color: 'white',
-      fontSize: '2em',
-      margin: 'auto'
-    };
-
     return (
       <div>
-        <nav className="navbar primary-bg">
-          <div className="navbar-start">
-            <a className="Header-burger" onClick={this.props.toggleSidebar}>
-              <Icon name="bars" />
-            </a>
+        <nav className="navbar primary-bg flexbox">
+          <a className="Header-burger" onClick={this.props.toggleSidebar}>
+            <Icon name="bars" />
+          </a>
 
-            <Link to="/" style={headerStyle}>Robogals<b>UQ</b></Link>
-          </div>
+          <Link className="flexbox" to="/">
+            <img style={{height: "2rem"}} src={process.env.PUBLIC_URL + "/global-just-text.png"} alt="Robogals Logo" />
+          </Link>
         </nav>
       </div>
     )

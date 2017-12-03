@@ -6,3 +6,12 @@
     margin: 10px;
     font-size: 2em;
 }
+
+.flexbox {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  height: 5rem;
+}

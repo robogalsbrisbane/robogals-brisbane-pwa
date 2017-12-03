@@ -1,14 +1,14 @@
 /* Set global colors here */
 .primary-bg {
-    background-color: #36648B; 
+    background-color: #2196F3;
 }
 
 .primary-bg-darker {
-    background-color: #033158;
+    background-color: #0960A5;
 }
 
 a {
-    color: #36648B; 
+    color: #2196F3;
 }
 
 html, body, #root, .fill-area {
