@@ -9,7 +9,7 @@ class Header extends Component {
 
     return (
       <div>
-        <nav className="navbar primary-bg flexbox">
+        <navbar className="navbar primary-bg flexbox">
           <a className="Header-burger" onClick={this.props.toggleSidebar}>
             <Icon name="bars" />
           </a>
@@ -17,7 +17,7 @@ class Header extends Component {
           <Link className="flexbox" to="/">
             <img style={{height: "2rem"}} src={process.env.PUBLIC_URL + "/global-just-text.png"} alt="Robogals Logo" />
           </Link>
-        </nav>
+        </navbar>
       </div>
     )
   }
