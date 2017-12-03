@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import './Footer.css';
 
 export default () => (
-  <div className="primary-bg-darker Footer-div">
+  <div className="primary-bg Footer-div">
     <div className="columns">
       <div className="column Footer-column">
         <h4>Get Involved!</h4>
         <p>
-					If you are a parent, educator, school student, university student 
+					If you are a parent, educator, school student, university student
           or industry professional of any age and gender,
           you can get involved with us. Find out more <Link to="/volunteer-with-us">here</Link>!
         </p>

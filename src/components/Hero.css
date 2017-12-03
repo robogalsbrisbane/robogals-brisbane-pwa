@@ -1,3 +1,10 @@
 .Hero-text {
-    text-align: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-height {
+  height: 27rem;
 }

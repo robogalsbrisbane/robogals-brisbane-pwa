@@ -18,24 +18,19 @@ class Hero extends Component {
     if (this.props.image) {
       // Move this to css
       const backgroundImageStyle = {
-        backgroundImage: `linear-gradient(
-            135deg,
-            rgba(54, 100, 139, 0.45),
-            rgba(3, 49, 88, 0.6)
-          ), 
-          url("${this.props.image}")`,
+        backgroundImage: `url("${this.props.image}")`,
         backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
       };
 
       return (
-        <section className="hero is-large" style={backgroundImageStyle}>
+        <section className="hero custom-height" style={backgroundImageStyle}>
           {this.renderTitle()}
         </section>
       );
     } else {
       return (
-        <section className="hero is-small primary-bg-darker">
+        <section className="hero is-small primary-bg">
           {this.renderTitle()}
         </section>
       );
