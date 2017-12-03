@@ -19,6 +19,12 @@
     font-family: Nexa;
 }
 
+#Page-quote {
+    color: white;
+    font-size: 28pt;
+    font-family: Nexa;
+}
+
 .Page-content h1 {
     font-size: 2em;
 }

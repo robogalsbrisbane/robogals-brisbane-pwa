@@ -121,7 +121,7 @@ class Page extends BaseComponent {
   render() {
     return (
       <div>
-        <Hero title={this.getTitle()} image={this.state.featuredImage} />
+        <Hero title={this.getTitle()} image={this.state.featuredImage} isQuote={this.props.isQuote} />
         <div 
           className="Page-content content"
           onClick={this.captureLinks}
@@ -134,7 +134,12 @@ class Page extends BaseComponent {
 
 Page.propTypes = {
   title: PropTypes.string,
-  slug: PropTypes.string
+  slug: PropTypes.string,
+  isQuote: PropTypes.bool
 };
+
+Page.defaultProps = {
+  isQuote: false
+}
 
 export default withRouter(Page);

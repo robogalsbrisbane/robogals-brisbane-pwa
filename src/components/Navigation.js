@@ -33,7 +33,7 @@ class Navigation extends Component {
     this.logPageView();
     const title = '<b>Inspire</b>, <b>engage</b> and <b>empower</b> young women into engineering related fields';
 
-    return <Page title={title} slug={this.props.frontpageSlug} />;
+    return <Page title={title} slug={this.props.frontpageSlug} isQuote={true} />;
   }
 
   /**
