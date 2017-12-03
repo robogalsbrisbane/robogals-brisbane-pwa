@@ -24,6 +24,7 @@ a {
     font-weight: 600;
     color: #333333;
     font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
 }
 
 html, body, #root, .fill-area {
