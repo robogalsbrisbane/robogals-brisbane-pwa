@@ -11,9 +11,29 @@ a {
     color: #2196F3;
 }
 
+/* Heading */
+.content > h1 {
+    font-size: 28pt;
+    color: #333333;
+    font-family: Nexa, sans-serif;
+}
+
+/* Subheading */
+.content > h3 {
+    font-size: 12;
+    font-weight: 600;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
 html, body, #root, .fill-area {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: '12pt';
+    color: #333333;
 }
