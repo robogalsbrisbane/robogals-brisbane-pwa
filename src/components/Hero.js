@@ -7,6 +7,14 @@ class Hero extends Component {
   renderTitle() {
     const title = { __html: this.props.title };
 
+    if (this.props.isQuote) {
+      return (
+        <div className="hero-body Hero-text">
+          <h2 id="Page-quote" dangerouslySetInnerHTML={title}></h2>
+        </div>
+      );
+    }
+
     return (
       <div className="hero-body Hero-text">
         <h1 id="Page-title" dangerouslySetInnerHTML={title}></h1>
@@ -41,7 +49,12 @@ class Hero extends Component {
 
 Hero.propTypes = {
   image: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
+  isQuote: PropTypes.bool
 };
+
+Hero.defaultProps = {
+  isQuote: false
+}
 
 export default Hero;
