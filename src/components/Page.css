@@ -30,7 +30,8 @@
 }
 
 .Page-content a {
-    color: #36648B;
+    color: #2196F3;
+    text-decoration: underline;
 }
 
 .Page-content img {
