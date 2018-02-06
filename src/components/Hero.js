@@ -7,17 +7,11 @@ class Hero extends Component {
   renderTitle() {
     const title = { __html: this.props.title };
 
-    if (this.props.isQuote) {
-      return (
-        <div className="hero-body Hero-text">
-          <h2 id="Page-quote" dangerouslySetInnerHTML={title}></h2>
-        </div>
-      );
-    }
+    const headerId = this.props.isQuote ? "Page-quote" : "Page-title";
 
     return (
       <div className="hero-body Hero-text">
-        <h1 id="Page-title" dangerouslySetInnerHTML={title}></h1>
+        <h2 id={headerId} dangerouslySetInnerHTML={title}></h2>
       </div>
     );
   }
