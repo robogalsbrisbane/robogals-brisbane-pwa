@@ -110,7 +110,9 @@ class Page extends BaseComponent {
 
   captureLinks(event) {
     const anchor = this.findAnchor(event.target);
-    if (anchor && anchor.href) {
+    // Don't capture if it is linking to something stored in wp-content
+    // Such as PDF files
+    if (anchor && anchor.href && !anchor.href.includes("wp-content")) {
       if (this.hostname === anchor.hostname) {
         event.preventDefault();
         this.props.history.push(anchor.pathname);
