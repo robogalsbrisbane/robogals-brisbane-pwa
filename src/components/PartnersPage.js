@@ -5,7 +5,7 @@ import Api from '../Api';
 
 class PartnersPage extends Component {
   constructor(props) {
-    super(props); 
+    super(props);
 
     // Allows us to get the content from the API
     this.api = new Api();
@@ -31,7 +31,7 @@ class PartnersPage extends Component {
   render() {
     return (
       <div>
-        <Hero title={"Our Partners"} />
+        <Hero title={"Testing"} />
         {this.renderPartners()}
       </div>
     );

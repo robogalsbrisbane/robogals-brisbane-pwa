@@ -8,7 +8,7 @@ import './Page.css';
 
 class Page extends BaseComponent {
   constructor(props) {
-    super(props); 
+    super(props);
 
     // Allows us to get the content from the API
     this.api = new Api();
@@ -120,15 +120,49 @@ class Page extends BaseComponent {
     }
   }
 
+  renderBody(frontPage, links) {
+    if(frontPage === true) {
+      return(
+          <div className="Page-content container" >
+            <div className='example absolute'>
+              <div className='item'>
+                <img src={process.env.PUBLIC_URL + "/test/1.png"} />
+                <div className="panel-text">Students</div>
+                </div>
+              <div className='item'>
+                <a href={`/volunteer-with-us`}>
+                  <img src={process.env.PUBLIC_URL + "/test/2.png"} />
+                </a>
+                <div className="panel-text">Volunteers</div>
+                </div>
+              <div className='item'>
+                <img src={process.env.PUBLIC_URL + "/test/3.png"}  />
+                <div className="panel-text">Partners</div>
+                </div>
+              <div className='item'>
+                <img src={process.env.PUBLIC_URL + "/test/4.png"} />
+                <div className="panel-text">Teachers</div>
+                </div>
+
+            </div>
+          </div>
+        )
+    }
+  }
+
+
+
+
   render() {
     return (
       <div>
         <Hero title={this.getTitle()} image={this.state.featuredImage} isQuote={this.props.isQuote} />
-        <div 
-          className="Page-content content"
-          onClick={this.captureLinks}
-          dangerouslySetInnerHTML={this.getBody()} 
+        <div
+        className="Page-content content"
+        onClick={this.captureLinks}
+        dangerouslySetInnerHTML={this.getBody()}
         />
+        {this.renderBody(this.props.isQuote, this.props.links)}
       </div>
     );
   }
@@ -137,7 +171,7 @@ class Page extends BaseComponent {
 Page.propTypes = {
   title: PropTypes.string,
   slug: PropTypes.string,
-  isQuote: PropTypes.bool
+  isQuote: PropTypes.bool,
 };
 
 Page.defaultProps = {

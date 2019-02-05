@@ -1,0 +1,76 @@
+.menutab {
+  margin-top: 15px;
+  justify-content: space-around;
+  left: 20px;
+}
+
+.menutab > ul {
+  display: inline-block;
+  align-items: left;
+  width: auto;
+  margin-right: 15px;
+
+}
+
+
+.main {
+  color:  #FFFFFF;
+}
+
+.tab > li {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+
+
+
+}
+
+
+.title-menu{
+ z-index: 2;
+ position: relative;  /* This is important! */
+ cursor: pointer;
+ margin-left: 10px;
+
+}
+
+.tab:hover {
+  text-decoration: underline;
+}
+
+.tab:hover .sub {
+  display: flex;
+  flex-direction: column;
+  background:  #2196F3;
+  position: absolute;
+  left: -7px;
+  top: -28px;
+   z-index: 1;
+   margin-top: 20px;
+}
+
+
+
+.sub > li {
+  list-style: none;
+  border-bottom: 1px solid #FFFFFF;
+  margin-left: 
+  padding: 20px 10px 10px 20px;
+
+
+}
+
+.sub li:last-of-type {
+  border-bottom: none;
+}
+
+.menudrop {
+  position: relative;
+
+}
+
+
+.sub{
+  display:none;
+}
