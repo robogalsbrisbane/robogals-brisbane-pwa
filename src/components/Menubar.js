@@ -13,6 +13,7 @@ class Menubar extends Component {
     }
     return link.object;
   }
+
   renderSubLinks(link) {
     if(!link) {
       return;
@@ -22,7 +23,7 @@ class Menubar extends Component {
         return (
           <li>
             <NavLink
-              className = "main"
+              className = "sub-heading"
               to={`/${this.parseLink(subLink)}`}
               dangerouslySetInnerHTML={{__html: subLink.title}}
             />
@@ -48,7 +49,6 @@ class Menubar extends Component {
    * @param {object} links A json object of links
    */
   renderLinks(links) {
-
     if (links == null) {
       return (
         <p>Server offline</p>
@@ -56,20 +56,13 @@ class Menubar extends Component {
     }
 
     const linkObjects = links.map((link) => {
-
       return (
-        <ul className="tab">
-          <li className="title-menu">
-             <a href={`/${this.parseLink(link)}`} className="main" >
-               {link.title}
-             </a>
-           </li>
-           <li className="menudrop">
-              <ul className="sub">
-                {this.renderSubLinks(link.children)}
-              </ul>
-           </li>
-         </ul>
+        <li className="tab">
+          <span>{link.title}</span>
+          <ul className="menudrop sub">
+              {this.renderSubLinks(link.children)}
+          </ul>
+        </li>
 
 
       );

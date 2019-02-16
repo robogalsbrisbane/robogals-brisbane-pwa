@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Partner from './Partner';
+import Partners from './Partners';
 import Hero from './Hero';
 import Api from '../Api';
+import './Partners.css';
 
 class PartnersPage extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class PartnersPage extends Component {
 
   renderPartners() {
     const partners = this.state.partners.map((partner) => {
-      return <Partner key={partner.id} api={this.api} partner={partner} />
+      return <Partners key={partner.id} api={this.api} partner={partner} />
     });
 
     return partners;
@@ -31,8 +32,31 @@ class PartnersPage extends Component {
   render() {
     return (
       <div>
-        <Hero title={"Testing"} />
+        <Hero title={"Our Partners"} />
+        <p className="text-style">
+        Robogals would not be able to bring our message to students without the support of our partners.
+        Their help allows us to run workshops, hold hackathons, organise rural trips, run industry networking events,
+        and support our volunteers.</p>
+
+        <p className="text-style">
+        If you are interested in helping Robogals Brisbane inspire the next generation of engineers,
+        please email our Partnerships Manager at brisbane.partnerships@robogals.org </p>
+
         {this.renderPartners()}
+
+        <div className="text-style content">
+          <h3> Our Coporate Supporters </h3>
+          <li> <a href="https://robogals.org/">
+            Robogals Global
+          </a></li>
+          <li> <a href="https://robogals.org/locations/asia-pacific-apac/">
+            Robogals Asia-Pacific
+          </a></li>
+          <li> <a href="https://www.itee.uq.edu.au/">
+            University of Queensland – School of Information Technology and Electrical Engineering
+          </a></li>
+        </div>
+
       </div>
     );
   }

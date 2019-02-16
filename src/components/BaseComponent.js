@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
 /**
- * Contains logic to check if a component is mounted 
+ * Contains logic to check if a component is mounted
  */
 class BaseComponent extends Component {
 

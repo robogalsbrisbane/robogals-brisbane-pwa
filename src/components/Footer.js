@@ -29,7 +29,7 @@ export default () => (
       </div>
 
       <div className="column Footer-column">
-        <p>Code by <a href="https://royportas.com">Roy Portas</a></p>
+        <p>Code by <a href="https://royportas.com">Roy Portas</a> and Sreema Ajith.</p>
       </div>
     </div>
   </div>

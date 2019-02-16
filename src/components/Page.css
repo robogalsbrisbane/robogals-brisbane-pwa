@@ -1,8 +1,8 @@
 .Page-content {
     margin: auto;
     width: 70%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .Page-content table td, .Page-content table th {
@@ -42,31 +42,84 @@
 .container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
-  margin-right: 9px;
+  margin-right: 1%;
+  padding-top: 0;
 }
 
 .example {
   display: flex;
   justify-content: space-around;
 
-  width: 100%;
-  margin: 50px 0;
-
 }
 
 .item  {
   display: block;
   position: relative;
+  flex:50%;
+  padding: 2% 2%;
+  height: 50%;
+  width: 50%;
 }
 
-.item:hover  img {
+.clickable:hover  img {
   opacity: 0.5;
 }
 
 .panel-text {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  weight: bold;
+  background-color: black;
+  opacity: 0.60;
   transform: translate(-50%, -50%);
+}
+
+.image-text {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: black;
+  opacity: 0.60;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.event-image {
+  padding-right: 3%;
+  padding-left: 4%;
+  width: 100%;
+}
+
+.events-container {
+  display: flex;
+  position:relative;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding:1% 1%;
+  padding-bottom: 3%;
+  width: 100%;
+}
+
+.info {
+  width: 100%;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .events-container{flex-direction: row; justify-content: center; align: center; padding-top: 0;}
+  .info {width: 40%; text-align: justify;}
+  .event-image {width: 35%;}
 }

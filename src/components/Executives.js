@@ -31,19 +31,22 @@ class Executive extends BaseComponent {
     };
   }
 
-  render() {
+  getExecUrl() {
+    const text = this.props.executive.title.rendered;
+    return text.replace(/\s+/g, '-').toLowerCase();
+  }
 
+
+  render() {
     return (
       <div className="Executive-box">
-
-        <div className="Executive-image">
-          <img alt="Logo" src={this.state.imageUrl} />
-        </div>
-
-        <div className="Executive-text">
-          <h1 className="title" dangerouslySetInnerHTML={this.getTitle()} />
-          <div dangerouslySetInnerHTML={this.getBody()} />
-        </div>
+          <a href={`/${this.getExecUrl()}`}>
+            <img  className="Executive-image" alt="Logo" src={this.state.imageUrl} />
+          </a>
+          <div className="Executive-text">
+            <h1 className="exec-title" dangerouslySetInnerHTML={this.getTitle()} />
+            <h3 className="exec-title" dangerouslySetInnerHTML={this.getBody()} />
+          </div>
       </div>
     )
   }

@@ -14,7 +14,8 @@ class Api {
       frontpage: '/wp-json/wp/v2/frontpage',
       page: '/wp-json/wp/v2/pages',
       media: '/wp-json/wp/v2/media',
-      //partners: '/wp-json/wp/v2/sponsors',
+      partners: '/wp-json/wp/v2/sponsors',
+      executives: '/wp-json/wp/v2/executives'
     };
   }
 
@@ -53,6 +54,7 @@ class Api {
    * Retrieves a media item
    */
   getMedia(mediaId) {
+
     if (mediaId == null) {
       // return an empty promise
       return new Promise((resolve, reject) => {
@@ -102,10 +104,31 @@ class Api {
   /**
    * Returns the executives
    */
+   getExecutives() {
+     return axios.get(this.getApiUrl('executives'))
+       .then((resp) => {
+         console.log(resp.data)
+         return resp.data;
+       })
+       .catch((err) => {
+         // console.log(err);
+       });
+   }
 
-  /**
-   * Returns the partners
-   */
+
+     /**
+      * Returns the partners
+      */
+     getPartners() {
+       return axios.get(this.getApiUrl('partners'))
+         .then((resp) => {
+           return resp.data;
+         })
+         .catch((err) => {
+           // console.log(err);
+         });
+     }
+
 
 
   /**
