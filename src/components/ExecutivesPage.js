@@ -68,7 +68,7 @@ class ExecutivesPage extends Component {
                 <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/partnerships.png"} />
               </a>
               <div className="Executive-text">
-                <h3 className="exec-title">Partnerships </h3>
+                <h3 className="exec-title">Partnerships Manager</h3>
                 <h1 className="exec-title"> Lasanthi Weerasekara </h1>
               </div>
           </div>
@@ -112,26 +112,26 @@ class ExecutivesPage extends Component {
           </div>
         </div>
         <div className="Executive-container">
-        <div className="Executive-box">
-            <a href={`/social-manager`}>
-              <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/social.png"} />
-            </a>
-            <div className="Executive-text">
-              <h3 className="exec-title"> Social Manager </h3>
-              <h1 className="exec-title"> Yiyan (Janice) Xu </h1>
-            </div>
-        </div>
           <div className="Executive-box">
-              <a href={`/deputy-social-manager`}>
-                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/social-deputy.png"} />
+              <a href={`/social-manager`}>
+                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/social.png"} />
               </a>
               <div className="Executive-text">
-                <h3 className="exec-title"> Deputy Social Manager </h3>
-                <h1 className="exec-title"> Gianluca Anzalone </h1>
+                <h3 className="exec-title"> Social Manager </h3>
+                <h1 className="exec-title"> Yiyan Xu (Janice)</h1>
               </div>
           </div>
-          <div className="Executive-box">
-          </div>
+              <div className="Executive-box">
+                  <a href={`/deputy-social-manager`}>
+                    <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/social-deputy.png"} />
+                  </a>
+                  <div className="Executive-text">
+                    <h3 className="exec-title"> Deputy Social Manager </h3>
+                    <h1 className="exec-title"> Gianluca Anzalone </h1>
+                  </div>
+              </div>
+            <div className="Executive-box">
+            </div>
         </div>
       </div>
 

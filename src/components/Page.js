@@ -123,7 +123,7 @@ class Page extends BaseComponent {
   renderImages(frontPage) {
     if(frontPage === true) {
       return(
-        <div className="Page-content container content">
+        <div className="container content">
           <h3>Our Initiatives</h3>
           <div className='example absolute'>
             <div className='item'>
@@ -238,7 +238,7 @@ class Page extends BaseComponent {
     var headings = ["Industry Gala", "Industry Trivia", "Industry Panel For STEMConnect", "Partner Workshops", "Rural Trips"];
     var images = [{link:"/partner-events/industry_gala", heading: headings[0], summary: desc[0]},
                   {link:"/partner-events/trivia", heading: headings[1], summary: desc[1]},
-                  {link:"/partner-events/STEMConnect", heading: headings[2], summary: desc[2]},
+                  {link:"/partner-events/stemConnect", heading: headings[2], summary: desc[2]},
                   {link:"/partner-events/partner-workshops", heading: headings[3], summary: desc[3]},
                   {link:"/volunteer-events/rural-trips", heading: headings[4], summary: desc[4]}];
 

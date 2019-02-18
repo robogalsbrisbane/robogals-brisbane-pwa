@@ -17,7 +17,6 @@ class App extends Component {
     this.api = new Api();
 
     this.state = {
-      sidebarVisible: false,
       menuLinks: [],
       frontpageSlug: ''
     };

@@ -22,9 +22,36 @@
     float:left;
 }
 
+.Executive-text {
+    position: absolute;
+    padding: 10px;
+    justify-content: left;
+    bottom: 2%;
+    left: 50%;
+    background-color: #0960A5;
+    opacity: 0.9;
+    text-align: center;
+    align-self: center;
+    transform: translate(-50%, -50%);
+    width: 75%;
+}
+
 @media screen and (max-width: 600px) {
   .Executive-box {width: 100%;}
   .Executive-container{display: block;}
+}
+
+@media screen and (min-width: 650px) and (max-width: 1000px) {
+  .Executive-box {
+    width: 50%;
+    padding: 1px;
+    margin: 7px;}
+
+  .Executive-text {
+    width: 90%;
+    bottom: 0;
+    font-size: 1em;
+  }
 }
 
 .Executive-box:hover  img {
@@ -33,16 +60,6 @@
 
 .Executive-image {
     width:100%;
-}
-
-.Executive-text {
-    position: absolute;
-    padding: 10px;
-    justify-content: left;
-    bottom: 20%;
-    left: 20%;
-    background-color: #0960A5;
-    opacity: 0.9;
 }
 
 .exec-title{
