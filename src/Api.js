@@ -107,7 +107,6 @@ class Api {
    getExecutives() {
      return axios.get(this.getApiUrl('executives'))
        .then((resp) => {
-         console.log(resp.data)
          return resp.data;
        })
        .catch((err) => {

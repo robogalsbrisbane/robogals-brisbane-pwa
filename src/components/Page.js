@@ -208,11 +208,11 @@ class Page extends BaseComponent {
                 "Training days are a great way for volunteers to learn more about what happens in a workshop and what to do in them. These days are held multiple times throughout each semester.",
                 "Every year, we run at least 2 rural trips going to rural and regional areas of Queensland. These fun trips are a great way to develop public speaking skills and get more involved in the club."];
     var headings = ["Rural Trips", "Hackathon", "World Science Festival", "Training Days", "On Campus Events"];
-    var images = [{link:"rural-trips", heading: headings[0], summary: desc[0]},
-                  {link:"hackathon", heading: headings[1], summary: desc[1]},
-                  {link:"WSF", heading: headings[2], summary: desc[2]},
+    var images = [{link:"rural-trips", heading: headings[0], summary: desc[4]},
+                  {link:"hackathon", heading: headings[1], summary: desc[0]},
+                  {link:"WSF", heading: headings[2], summary: desc[1]},
                   {link:"training-days", heading: headings[3], summary: desc[3]},
-                  {link:"on-campus", heading: headings[4], summary: desc[4]}];
+                  {link:"on-campus", heading: headings[4], summary: desc[2]}];
 
     const events = images.map(eventImage => {
       return(
