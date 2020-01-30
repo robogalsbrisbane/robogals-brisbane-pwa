@@ -18,7 +18,7 @@ class Sidebar extends Component {
    * Renders all links from the props.links object
    */
   renderAllLinks() {
-    return this.renderLinks(this.props.links, 0);  
+    return this.renderLinks(this.props.links, 0);
   }
 
   /**
@@ -48,12 +48,12 @@ class Sidebar extends Component {
       return (
         <div key={link.title}>
           <li className="Sidebar-link">
-            <NavLink 
+            <NavLink
               activeClassName="Sidebar-link-active"
               onClick={this.props.closeSidebar}
               to={`/${this.parseLink(link)}`}
               style={style}
-              dangerouslySetInnerHTML={{__html: link.title}} 
+              dangerouslySetInnerHTML={{__html: link.title}}
             />
           </li>
           <ul>

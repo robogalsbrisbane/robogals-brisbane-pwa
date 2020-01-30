@@ -9,12 +9,13 @@ class Api {
     this.apiUrl = process.env.REACT_APP_API_ADDRESS;
 
     this.apiPaths = {
-      menu: '/wp-json/wp-api-menus/v2/menus/2',
+      actualmenu: '/wp-json/wp-api-menus/v2/menus/2',
+      menu: '/wp-json/wp-api-menus/v2/menus/4',
       frontpage: '/wp-json/wp/v2/frontpage',
       page: '/wp-json/wp/v2/pages',
       media: '/wp-json/wp/v2/media',
       partners: '/wp-json/wp/v2/sponsors',
-      executives: '/wp-json/wp/v2/executives',
+      executives: '/wp-json/wp/v2/executives'
     };
   }
 
@@ -53,6 +54,7 @@ class Api {
    * Retrieves a media item
    */
   getMedia(mediaId) {
+
     if (mediaId == null) {
       // return an empty promise
       return new Promise((resolve, reject) => {
@@ -102,28 +104,31 @@ class Api {
   /**
    * Returns the executives
    */
-  getExecutives() {
-    return axios.get(this.getApiUrl('executives'))
-      .then((resp) => {
-        return resp.data;
-      })
-      .catch((err) => {
-        // console.log(err);
-      });
-  }
+   getExecutives() {
+     return axios.get(this.getApiUrl('executives'))
+       .then((resp) => {
+         return resp.data;
+       })
+       .catch((err) => {
+         // console.log(err);
+       });
+   }
 
-  /**
-   * Returns the partners
-   */
-  getPartners() {
-    return axios.get(this.getApiUrl('partners'))
-      .then((resp) => {
-        return resp.data;
-      })
-      .catch((err) => {
-        // console.log(err);
-      });
-  }
+
+     /**
+      * Returns the partners
+      */
+     getPartners() {
+       return axios.get(this.getApiUrl('partners'))
+         .then((resp) => {
+           return resp.data;
+         })
+         .catch((err) => {
+           // console.log(err);
+         });
+     }
+
+
 
   /**
    * Returns the frontpage

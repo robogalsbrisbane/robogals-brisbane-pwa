@@ -1,17 +1,15 @@
-.Header-burger {
-    color: white;
-}
-
-.Header-burger > span {
-    margin: 25px;
-    font-size: 2em;
-}
-
-.flexbox {
+.header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 19px 19px 0px 19px;
+
+}
+.logo {
+  padding-left: 19px;
 }
 
-.navbar {
-  height: 5rem;
+@media only screen and (max-width: 770px) {
+  .header{flex-direction: column; align-self: center; justify-content: center;}
 }

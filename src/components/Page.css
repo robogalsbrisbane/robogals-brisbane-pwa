@@ -34,6 +34,113 @@
     text-decoration: underline;
 }
 
-.Page-content img {
+
+.front {
     height: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-right: 1%;
+}
+
+.example {
+  display: flex;
+}
+
+.example:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.item  {
+  position:relative;
+  justify-content: center;
+  align-items: center;
+  padding:2%;
+  margin: 2%;
+  width: 33.3%;
+  float:left;
+}
+
+.clickable {
+  width: 50%;
+}
+
+
+
+.clickable:hover  img {
+  opacity: 0.5;
+}
+
+.panel-text {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  weight: bold;
+  background-color: black;
+  opacity: 0.60;
+  transform: translate(-50%, -50%);
+}
+
+.image-text {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: black;
+  opacity: 0.70;
+  text-align: center;
+  min-width: 80%;
+  transform: translate(-50%, -50%);
+}
+
+.event-image {
+  padding-right: 3%;
+  padding-left: 4%;
+  width: 100%;
+}
+
+.events-container {
+  display: flex;
+  position:relative;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding:1% 1%;
+  padding-bottom: 3%;
+  width: 100%;
+}
+
+.info {
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .item {width: 100%;}
+  .clickable {width: 100%;}
+  .example {display: block;}
+}
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+  .item {width: 50%;}
+}
+
+@media only screen and (min-width: 768px) {
+  .events-container{flex-direction: row; justify-content: center; align: center; padding-top: 0;}
+  .info {width: 40%; text-align: justify;}
+  .event-image {width: 35%;}
 }

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './Footer.css';
 
 export default () => (
-  <div className="primary-bg Footer-div">
+  <div className="primary-bg-darker Footer-div">
     <div className="columns">
       <div className="column Footer-column">
         <h4>Get Involved!</h4>
@@ -21,12 +21,15 @@ export default () => (
           <a href="https://www.facebook.com/Robogals.UQ">Facebook</a>
         </p>
         <p>
+          <a href="https://au.linkedin.com/company/robogals-brisbane">Linkedin</a>
+        </p>
+        <p>
           <a href="mailto:exec@robogals.org.au">Email</a>
         </p>
       </div>
 
       <div className="column Footer-column">
-        <p>Code by <a href="https://royportas.com">Roy Portas</a></p>
+        <p>Code by <a href="https://royportas.com">Roy Portas</a> and Sreema Ajith.</p>
       </div>
     </div>
   </div>

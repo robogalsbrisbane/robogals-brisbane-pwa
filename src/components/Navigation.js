@@ -3,8 +3,7 @@ import { Route } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import Page from './Page';
 import PartnersPage from './PartnersPage';
-import ExecutivesPage from './ExecutivesPage';
-import WorkshopMap from './WorkshopMap';
+import ExecutivesPage from './ExecutivesPage'
 
 class Navigation extends Component {
 
@@ -33,12 +32,12 @@ class Navigation extends Component {
     this.logPageView();
     const title = '<b>Inspire</b>, <b>engage</b> and <b>empower</b> young women into engineering related fields';
 
-    return <Page title={title} slug={this.props.frontpageSlug} isQuote={true} />;
+    return <Page title={title} slug={'about-us'} isQuote={true}/>;
   }
 
   /**
    * Render a page
-   * 
+   *
    * The props is a instance from the React Router
    */
   renderPage(props) {
@@ -46,13 +45,15 @@ class Navigation extends Component {
     const slug = props.match.params.page_slug;
 
     switch (slug) {
-      case 'sponsors':
-        return <PartnersPage />;
-      case 'executives':
+      case 'executive':
         return <ExecutivesPage />;
-      case 'locations':
-        return <WorkshopMap />;
-      case 'home-page':
+      case 'partners':
+        return <PartnersPage />;
+      case 'volunteer-events':
+        return <Page slug={slug} isVolunteerEvents={true}/>;
+      case 'partner-events':
+        return <Page slug={slug} isPartnerEvents={true}/>;
+      case 'about-us':
         return this.renderFrontpage();
       default:
         return <Page slug={slug} />;

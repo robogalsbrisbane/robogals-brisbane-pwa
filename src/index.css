@@ -25,6 +25,7 @@ a {
     color: #333333;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    text-align: center;
 }
 
 html, body, #root, .fill-area {
