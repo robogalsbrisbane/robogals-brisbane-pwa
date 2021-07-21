@@ -4,6 +4,7 @@
 
 .Executive-container {
   display:flex;
+  justify-content: center;
 }
 
 .Executive-container:after {

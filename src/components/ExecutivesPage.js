@@ -67,7 +67,7 @@ class ExecutivesPage extends Component {
         <div className="Executive-container">
           <div className="Executive-box">
               <a href={`/metro-schools-manager`}>
-                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/schools.png"} />
+                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/schools.jpg"} />
               </a>
               <div className="Executive-text">
                 <h3 className="exec-title">Schools Manager</h3>
@@ -76,7 +76,7 @@ class ExecutivesPage extends Component {
           </div>
           <div className="Executive-box">
               <a href={`/marketing-manager`}>
-                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/marketing.jpg"} />
+                <img className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/marketing.jpg"} />
               </a>
               <div className="Executive-text">
                 <h3 className="exec-title">Marketing Manager</h3>
