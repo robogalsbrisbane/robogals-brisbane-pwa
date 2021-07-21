@@ -37,21 +37,22 @@
     width: 75%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .Executive-box {width: 100%;}
   .Executive-container{display: block;}
 }
 
-@media screen and (min-width: 650px) and (max-width: 1000px) {
+@media screen and (min-width: 651px) and (max-width: 1000px) {
   .Executive-box {
     width: 50%;
     padding: 1px;
-    margin: 7px;}
+    margin: 7px;
+  }
 
   .Executive-text {
     width: 90%;
     bottom: 0;
-    font-size: 1em;
+    font-size: 0.8em;
   }
 }
 
