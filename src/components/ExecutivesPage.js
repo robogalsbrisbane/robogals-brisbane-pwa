@@ -27,40 +27,22 @@ class ExecutivesPage extends Component {
         <div className="Executive-container">
           <div className="Executive-box">
               <a href={`/president`}>
-                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/president.png"} />
+                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/president.jpg"} />
               </a>
               <div className="Executive-text">
-                <h3 className="exec-title"> President </h3>
-                <h1 className="exec-title"> Isha Joshi </h1>
-              </div>
-          </div>
-          <div className="Executive-box">
-              <a href={`/secretary`}>
-                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/secretary.png"} />
-              </a>
-              <div className="Executive-text">
-                <h3 className="exec-title"> Secretary </h3>
-                <h1 className="exec-title">Anabelle Cooper </h1>
-              </div>
-          </div>
-          <div className="Executive-box">
-              <a href={`/deputy-secretary`}>
-                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/secretary-deputy.png"} />
-              </a>
-              <div className="Executive-text">
-                <h3 className="exec-title">Deputy Secretary </h3>
-                <h1 className="exec-title"> Georgia Cooke </h1>
+                <h3 className="exec-title">President</h3>
+                <h1 className="exec-title">Smriti Bangera</h1>
               </div>
           </div>
         </div>
         <div className="Executive-container">
           <div className="Executive-box">
-              <a href={`/treasurer`}>
-                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/treasurer.png"} />
+              <a href={`/secretary`}>
+                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/secretary.jpg"} />
               </a>
               <div className="Executive-text">
-                <h3 className="exec-title"> Treasurer </h3>
-                <h1 className="exec-title"> Thibaut Zeestraten </h1>
+                <h3 className="exec-title">Secretary</h3>
+                <h1 className="exec-title">Justine Bennet</h1>
               </div>
           </div>
           <div className="Executive-box">
@@ -69,73 +51,49 @@ class ExecutivesPage extends Component {
               </a>
               <div className="Executive-text">
                 <h3 className="exec-title">Partnerships Manager</h3>
-                <h1 className="exec-title"> Lasanthi Weerasekara </h1>
+                <h1 className="exec-title">Jacob Henderson</h1>
               </div>
           </div>
           <div className="Executive-box">
-              <a href={`/metro-schools-manager`}>
-                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/metro-schools.png"} />
+              <a href={`/treasurer`}>
+                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/treasurer.jpg"} />
               </a>
               <div className="Executive-text">
-                <h3 className="exec-title">Metro Schools Manager </h3>
-                <h1 className="exec-title">Jared Carey</h1>
+                <h3 className="exec-title">Treasurer</h3>
+                <h1 className="exec-title">Helena Payne</h1>
               </div>
           </div>
         </div>
         <div className="Executive-container">
           <div className="Executive-box">
-              <a href={`/rural-schools-manager`}>
-                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/rural-schools.png"} />
+              <a href={`/metro-schools-manager`}>
+                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/schools.png"} />
               </a>
               <div className="Executive-text">
-                <h3 className="exec-title"> Rural Schools Manager </h3>
-                <h1 className="exec-title"> Michael Day </h1>
-              </div>
-          </div>
-          <div className="Executive-box">
-              <a href={`/training-manager`}>
-                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/training.png"} />
-              </a>
-              <div className="Executive-text">
-                <h3 className="exec-title">Training Manager </h3>
-                <h1 className="exec-title">Suzannah Cooper </h1>
+                <h3 className="exec-title">Schools Manager</h3>
+                <h1 className="exec-title">Jared Carey</h1>
               </div>
           </div>
           <div className="Executive-box">
               <a href={`/marketing-manager`}>
-                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/marketing.png"} />
+                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/marketing.jpg"} />
               </a>
               <div className="Executive-text">
-                <h3 className="exec-title">Marketing Manager </h3>
-                <h1 className="exec-title">Bianca Zhang</h1>
+                <h3 className="exec-title">Marketing Manager</h3>
+                <h1 className="exec-title">Kimberley Randall</h1>
               </div>
           </div>
-        </div>
-        <div className="Executive-container">
           <div className="Executive-box">
-              <a href={`/social-manager`}>
-                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/social.png"} />
+              <a href={`/training-manager`}>
+                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/training.jpg"} />
               </a>
               <div className="Executive-text">
-                <h3 className="exec-title"> Social Manager </h3>
-                <h1 className="exec-title"> Yiyan Xu (Janice)</h1>
+                <h3 className="exec-title">Training Manager</h3>
+                <h1 className="exec-title">Reagan Marshall</h1>
               </div>
           </div>
-              <div className="Executive-box">
-                  <a href={`/deputy-social-manager`}>
-                    <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/social-deputy.png"} />
-                  </a>
-                  <div className="Executive-text">
-                    <h3 className="exec-title"> Deputy Social Manager </h3>
-                    <h1 className="exec-title"> Gianluca Anzalone </h1>
-                  </div>
-              </div>
-            <div className="Executive-box">
-            </div>
         </div>
       </div>
-
-
     );
   }
 

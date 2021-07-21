@@ -45,7 +45,7 @@ class Navigation extends Component {
     const slug = props.match.params.page_slug;
 
     switch (slug) {
-      case 'executive':
+      case 'executive-team':
         return <ExecutivesPage />;
       case 'partners':
         return <PartnersPage />;
