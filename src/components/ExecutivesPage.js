@@ -23,20 +23,19 @@ class ExecutivesPage extends Component {
 
   renderExecutives() {
     return(
-      <div>
-        <div className="Executive-container">
-          <div className="Executive-box">
-              <a href={`/president`}>
-                <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/president.jpg"} />
-              </a>
-              <div className="Executive-text">
-                <h3 className="exec-title">President</h3>
-                <h1 className="exec-title">Smriti Bangera</h1>
-              </div>
-          </div>
+      <div className="Executive-team">
+
+        <div className="Executive-box">
+            <a href={`/president`}>
+              <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/president.jpg"} />
+            </a>
+            <div className="Executive-text">
+              <h3 className="exec-title">President</h3>
+              <h1 className="exec-title">Smriti Bangera</h1>
+            </div>
         </div>
-        <div className="Executive-container">
-          <div className="Executive-box">
+
+        <div className="Executive-box">
               <a href={`/secretary`}>
                 <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/secretary.jpg"} />
               </a>
@@ -45,6 +44,7 @@ class ExecutivesPage extends Component {
                 <h1 className="exec-title">Justine Bennet</h1>
               </div>
           </div>
+
           <div className="Executive-box">
               <a href={`/partnerships-manager`}>
                 <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/partnerships.png"} />
@@ -54,6 +54,7 @@ class ExecutivesPage extends Component {
                 <h1 className="exec-title">Jacob Henderson</h1>
               </div>
           </div>
+
           <div className="Executive-box">
               <a href={`/treasurer`}>
                 <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/treasurer.jpg"} />
@@ -63,8 +64,7 @@ class ExecutivesPage extends Component {
                 <h1 className="exec-title">Helena Payne</h1>
               </div>
           </div>
-        </div>
-        <div className="Executive-container">
+
           <div className="Executive-box">
               <a href={`/metro-schools-manager`}>
                 <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/schools.jpg"} />
@@ -74,6 +74,7 @@ class ExecutivesPage extends Component {
                 <h1 className="exec-title">Jared Carey</h1>
               </div>
           </div>
+
           <div className="Executive-box">
               <a href={`/marketing-manager`}>
                 <img className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/marketing.jpg"} />
@@ -83,6 +84,7 @@ class ExecutivesPage extends Component {
                 <h1 className="exec-title">Kimberley Randall</h1>
               </div>
           </div>
+
           <div className="Executive-box">
               <a href={`/training-manager`}>
                 <img  className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/training.jpg"} />
@@ -92,7 +94,7 @@ class ExecutivesPage extends Component {
                 <h1 className="exec-title">Reagan Marshall</h1>
               </div>
           </div>
-        </div>
+
       </div>
     );
   }
