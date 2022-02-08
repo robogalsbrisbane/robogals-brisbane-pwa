@@ -31,7 +31,7 @@
     width: 75%;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 675px) {
   
   .Executive-team {
     grid-template-columns: repeat(2, 1fr);
@@ -47,6 +47,14 @@
     width: 90%;
     bottom: 0;
     font-size: 0.8em;
+  }
+}
+
+@media screen and (min-width: 675px) and (max-width: 1000px) {
+
+  .Executive-box:last-of-type {
+    width: 50vw;
+    grid-column: 1 / span 2;
   }
 }
 
@@ -79,3 +87,22 @@
   color: #FFFFFF;
   opacity: 0.9;
 }
+
+.click-execs-text {
+  min-width: 300px;
+  max-width: 650px;
+  margin: auto;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: inherit;
+  padding: 25px 0px 0px 0px;
+  line-height: 1.125;
+  font-size: 1.25em;
+  margin-bottom: 0.6666em;
+  font-weight: 600;
+  color: #333333;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+/*  */
