@@ -5,7 +5,7 @@
 .Executive-team {
   display: grid;
   justify-content: center;
-
+  padding-bottom: 20px;
 }
 
 .Executive-box {
@@ -35,10 +35,11 @@
   
   .Executive-team {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 0fr);
   }
 
   .Executive-box:first-of-type {
+    max-width: 575px;
     width: 50vw;
     grid-column: 1 / span 2;
   }
@@ -62,10 +63,13 @@
   
   .Executive-team {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 0fr);
+    max-width: 1600px;
+    margin:auto;
   }
 
   .Executive-box:first-of-type {
+    max-width: 575px;
     width: 40vw;
     grid-column: 1 / span 3;
   }
@@ -78,6 +82,7 @@
 
 .Executive-image {
     width:100%;
+    border-radius: 25px;
 }
 
 .exec-title{
@@ -105,4 +110,3 @@
   text-transform: uppercase;
   text-align: center;
 }
-/*  */

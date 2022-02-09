@@ -116,7 +116,9 @@ class ExecutivesPage extends Component {
           </div>
 
           <div className="Executive-box">
-              <img className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/marketing-01.png"} />
+              <a href={`/marketing-manager-01`}>
+                <img className="Executive-image" alt="Logo" src={process.env.PUBLIC_URL + "/exec/marketing-01.png"} />
+              </a>
               {/* <div className="Executive-text">
                 <h3 className="exec-title">Marketing Manager</h3>
                 <h1 className="exec-title">Luna Dang</h1>
