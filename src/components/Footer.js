@@ -18,13 +18,13 @@ export default () => (
       <div className="column Footer-column">
 				<h4>Follow us!</h4>
         <p>
-          <a href="https://www.facebook.com/Robogals.UQ">Facebook</a>
+          <a target="_blank" href="https://www.facebook.com/Robogals.Brisbane">Facebook</a>
         </p>
         <p>
-          <a href="https://au.linkedin.com/company/robogals-brisbane">Linkedin</a>
+          <a target="_blank" href="https://au.linkedin.com/company/robogals-brisbane">Linkedin</a>
         </p>
         <p>
-          <a href="mailto:exec@robogals.org.au">Email</a>
+          <a href="mailto:brisbane.exec@robogals.org ">Email</a>
         </p>
       </div>
 

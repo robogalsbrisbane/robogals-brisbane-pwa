@@ -131,10 +131,8 @@ class Page extends BaseComponent {
               <div className="image-text">Student Workshops</div>
             </div>
             <div className='item'>
-              <a href={`/volunteer-with-us`}>
                 <img src={process.env.PUBLIC_URL + "/test/home_stemconnect.png"} />
-              </a>
-              <div className="image-text">STEMConnect Mentoring Program</div>
+                <div className="image-text">STEMConnect Mentoring Program</div>
             </div>
             <div className='item ' >
                 <img src={process.env.PUBLIC_URL + "/test/home_industry.png"}  />
@@ -147,10 +145,8 @@ class Page extends BaseComponent {
               <div className="image-text">Social Events</div>
             </div>
             <div className='item'>
-              <a href={`/volunteer-with-us`}>
                 <img src={process.env.PUBLIC_URL + "/test/home_rural.png"} />
-              </a>
-              <div className="image-text">Rural Trips</div>
+                <div className="image-text">Rural Trips</div>
             </div>
             <div className='item ' >
                 <img src={process.env.PUBLIC_URL + "/test/home_teacher_workshops.png"}  />

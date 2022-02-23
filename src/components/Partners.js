@@ -64,7 +64,7 @@ class Partners extends Component {
     return (
       <div  className={this.classNameType(title)}>
         <div className="Partner-image">
-          <a href={this.getLinkToSite(title)}>
+          <a target="_blank" href={this.getLinkToSite(title)}>
             <img alt="Logo" src={this.state.imageUrl} />
           </a>
         </div>
