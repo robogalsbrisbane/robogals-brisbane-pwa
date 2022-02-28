@@ -15,6 +15,26 @@ class PartnersPage extends Component {
       partners: []
     };
 
+    this.activePartners = {
+      "ConocoPhillips"                  : true,         
+      "Rio Tinto"                       : false, 
+      "National Transport Insurance"    : true,                     
+      "ERM Power"                       : false, 
+      "Polymathian"                     : false,     
+      "Deloitte"                        : true, 
+      "Jade Engineering"                : true,         
+      "Caterpillar"                     : false,     
+      "Wood."                           : true,
+      "KPMG"                            : true,
+      "EY"                              : true,
+      "IMC Trading"                     : true,     
+      "Amazon"                          : true, 
+      "Department of Defence"           : true,             
+      "Micromelon Robotics"             : true,             
+      "Prosple"                         : true, 
+      "Teach For Australia"             : true,
+    };
+
     this.api.getPartners()
       .then((partners) => {
         this.setState({partners: partners});
@@ -22,7 +42,13 @@ class PartnersPage extends Component {
   }
 
   renderPartners() {
-    const partners = this.state.partners.map((partner) => {
+    console.log('Pre Partners', this.state.partners);
+    console.log('Active Partners', this.activePartners);
+    console.log('Dictionary Test', this.activePartners["Teach For Australia"]);
+
+    const partners = this.state.partners
+                              .filter((partner) => this.activePartners[partner.title.rendered])
+                              .map((partner) => {
       return <Partners key={partner.id} api={this.api} partner={partner} />
     });
 

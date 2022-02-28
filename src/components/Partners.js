@@ -40,21 +40,39 @@ class Partners extends Component {
 
   getLinkToSite(title) {
     if (title === "ConocoPhillips") {
-       return "https://www.conocophillips.com.au/";
+      return "https://www.conocophillips.com.au/";
     } else if (title === "Rio Tinto") {
-       return "https://www.riotinto.com/";
+      return "https://www.riotinto.com/";
     } else if (title === "National Transport Insurance") {
-       return "https://www.nti.com.au/";
+      return "https://www.nti.com.au/";
     } else if (title === "ERM Power") {
-       return "https://ermpower.com.au/";
+      return "https://ermpower.com.au/";
     } else if (title === "Polymathian") {
-       return "https://polymathian.com/";
+      return "https://polymathian.com/";
     } else if (title === "Deloitte") {
-       return "https://www2.deloitte.com/au/en.html";
+      return "https://www2.deloitte.com/au/en.html";
     } else  if (title === "Jade Engineering") {
-       return "https://www.jadeeng.com.au/";
+      return "https://www.jadeeng.com.au/";
     } else if (title === "Caterpillar") {
-       return "https://www.cat.com/en_AU.html";
+      return "https://www.cat.com/en_AU.html";
+    } else if (title === "Wood.") {
+      return "https://www.woodplc.com/";
+    } else if (title === "KPMG") {
+      return "https://home.kpmg/au/en/home.html";
+    } else if (title === "EY") {
+      return "https://www.ey.com/en_au";
+    } else if (title === "IMC Trading") {
+      return "https://www.imc.edu.au/";
+    } else if (title === "Amazon") {
+      return "https://www.aboutamazon.com/";
+    } else if (title === "Department of Defence") {
+      return "https://www.defence.gov.au/";
+    } else if (title === "Micromelon Robotics") {
+      return "https://micromelon.com.au/";
+    } else if (title === "Prosple") {
+      return "https://prosple.com/about-us";
+    } else if (title === "Teach For Australia") {
+      return "https://teachforaustralia.org/";
     }
   }
 
